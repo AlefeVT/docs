@@ -8,7 +8,6 @@ const DocumentIdPage = async ({ params }: DocumentIdPage) => {
 
   return (
     <div>
-      Document Id: {documentId}
       <Editor />
     </div>
   );
