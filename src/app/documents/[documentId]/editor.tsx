@@ -12,6 +12,8 @@ import ImageResize from "tiptap-extension-resize-image";
 import Underline from "@tiptap/extension-underline";
 import FontFamily from "@tiptap/extension-font-family";
 import TextStyle from "@tiptap/extension-text-style";
+import { Color } from "@tiptap/extension-color";
+import Hightlight from "@tiptap/extension-highlight";
 import { useEditor, EditorContent } from "@tiptap/react";
 import { useEditorStore } from "@/app/store/use-editor-store";
 
@@ -52,6 +54,10 @@ const Editor = () => {
     },
     extensions: [
       StarterKit,
+      Color,
+      Hightlight.configure({
+        multicolor: true,
+      }),
       FontFamily,
       TextStyle,
       Underline,
