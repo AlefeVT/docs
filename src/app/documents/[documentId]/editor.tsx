@@ -14,6 +14,7 @@ import FontFamily from "@tiptap/extension-font-family";
 import TextStyle from "@tiptap/extension-text-style";
 import { Color } from "@tiptap/extension-color";
 import Hightlight from "@tiptap/extension-highlight";
+import Link from "@tiptap/extension-link";
 import { useEditor, EditorContent } from "@tiptap/react";
 import { useEditorStore } from "@/app/store/use-editor-store";
 
@@ -54,6 +55,11 @@ const Editor = () => {
     },
     extensions: [
       StarterKit,
+      Link.configure({
+        openOnClick: true,
+        autolink: true,
+        defaultProtocol: "https",
+      }),
       Color,
       Hightlight.configure({
         multicolor: true,
