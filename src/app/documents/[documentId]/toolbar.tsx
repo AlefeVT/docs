@@ -64,7 +64,7 @@ const LineHeightButton = () => {
   const { editor } = useEditorStore();
 
   const lineHeights = [
-    { label: "Default", value: "normal" },
+    { label: "Padrão", value: "normal" },
     { label: "Simples", value: "1" },
     { label: "1.15", value: "1.15" },
     { label: "1.5", value: "1.5" },
