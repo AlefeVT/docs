@@ -39,8 +39,57 @@ import {
   Undo2Icon,
 } from "lucide-react";
 import { BsFilePdf } from "react-icons/bs";
+import { useEditorStore } from "@/app/store/use-editor-store";
 
 export const Navbar = () => {
+  const { editor } = useEditorStore();
+
+  const insertTable = ({ rows, cols }: { rows: number; cols: number }) => {
+    editor
+      ?.chain()
+      .focus()
+      .insertTable({ rows, cols, withHeaderRow: false })
+      .run();
+  };
+
+  const onDownload = (blob: Blob, filename: string) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    a.click();
+  };
+
+  const onSaveJSON = () => {
+    if (!editor) return;
+
+    const content = editor.getJSON();
+    const blob = new Blob([JSON.stringify(content)], {
+      type: "application/json",
+    });
+    onDownload(blob, `document.json`);
+  };
+
+  const onSaveHTML = () => {
+    if (!editor) return;
+
+    const content = editor.getHTML();
+    const blob = new Blob([content], {
+      type: "text/html",
+    });
+    onDownload(blob, `document.html`);
+  };
+
+  const onSaveText = () => {
+    if (!editor) return;
+
+    const content = editor.getText();
+    const blob = new Blob([content], {
+      type: "text/plain",
+    });
+    onDownload(blob, `document.txt`);
+  };
+
   return (
     <nav className="flex items-center justify-between">
       <div className="flex gap-2 items-center">
@@ -62,19 +111,19 @@ export const Navbar = () => {
                       Salvar
                     </MenubarSubTrigger>
                     <MenubarSubContent>
-                      <MenubarItem>
+                      <MenubarItem onClick={onSaveJSON}>
                         <FileJsonIcon className="size-4 mr-2" />
                         JSON
                       </MenubarItem>
-                      <MenubarItem>
+                      <MenubarItem onClick={onSaveHTML}>
                         <GlobeIcon className="size-4 mr-2" />
                         HTML
                       </MenubarItem>
-                      <MenubarItem>
+                      <MenubarItem onClick={() => window.print()}>
                         <BsFilePdf className="size-4 mr-2" />
                         PDF
                       </MenubarItem>
-                      <MenubarItem>
+                      <MenubarItem onClick={onSaveText}>
                         <FileTextIcon className="size-4 mr-2" />
                         TXT
                       </MenubarItem>
@@ -105,11 +154,15 @@ export const Navbar = () => {
                   Editar
                 </MenubarTrigger>
                 <MenubarContent>
-                  <MenubarItem>
+                  <MenubarItem
+                    onClick={() => editor?.chain().focus().undo().run()}
+                  >
                     <Undo2Icon className="size-4 mr-2" />
                     Desfazer <MenubarShortcut>Ctrl + Z</MenubarShortcut>
                   </MenubarItem>
-                  <MenubarItem>
+                  <MenubarItem
+                    onClick={() => editor?.chain().focus().redo().run()}
+                  >
                     <Redo2Icon className="size-4 mr-2" />
                     Resfazer <MenubarShortcut>Ctrl + Y</MenubarShortcut>
                   </MenubarItem>
@@ -123,10 +176,26 @@ export const Navbar = () => {
                   <MenubarSub>
                     <MenubarSubTrigger>Tabela</MenubarSubTrigger>
                     <MenubarSubContent>
-                      <MenubarItem>1 x 1</MenubarItem>
-                      <MenubarItem>2 x 2</MenubarItem>
-                      <MenubarItem>3 x 3</MenubarItem>
-                      <MenubarItem>4 x 4</MenubarItem>
+                      <MenubarItem
+                        onClick={() => insertTable({ rows: 1, cols: 1 })}
+                      >
+                        1 x 1
+                      </MenubarItem>
+                      <MenubarItem
+                        onClick={() => insertTable({ rows: 2, cols: 2 })}
+                      >
+                        2 x 2
+                      </MenubarItem>
+                      <MenubarItem
+                        onClick={() => insertTable({ rows: 3, cols: 3 })}
+                      >
+                        3 x 3
+                      </MenubarItem>
+                      <MenubarItem
+                        onClick={() => insertTable({ rows: 4, cols: 4 })}
+                      >
+                        4 x 4
+                      </MenubarItem>
                     </MenubarSubContent>
                   </MenubarSub>
                 </MenubarContent>
@@ -142,27 +211,46 @@ export const Navbar = () => {
                       Texto
                     </MenubarSubTrigger>
                     <MenubarSubContent>
-                      <MenubarItem>
+                      <MenubarItem
+                        onClick={() =>
+                          editor?.chain().focus().toggleBold().run()
+                        }
+                      >
                         <BoldIcon className="size-4 mr-2" />
-                        Negrito <MenubarShortcut>Ctrl + N</MenubarShortcut>
+                        Negrito <MenubarShortcut>Ctrl + B</MenubarShortcut>
                       </MenubarItem>
-                      <MenubarItem>
+                      <MenubarItem
+                        onClick={() =>
+                          editor?.chain().focus().toggleItalic().run()
+                        }
+                      >
                         <ItalicIcon className="size-4 mr-2" />
                         Itálico <MenubarShortcut>Ctrl + I</MenubarShortcut>
                       </MenubarItem>
-                      <MenubarItem>
+                      <MenubarItem
+                        onClick={() =>
+                          editor?.chain().focus().toggleUnderline().run()
+                        }
+                      >
                         <UnderlineIcon className="size-4 mr-2" />
                         <span>Sublinhado&nbsp;&nbsp;&nbsp;</span>{" "}
-                        <MenubarShortcut>Ctrl + S</MenubarShortcut>
+                        <MenubarShortcut>Ctrl + U</MenubarShortcut>
                       </MenubarItem>
-                      <MenubarItem>
+                      <MenubarItem
+                        onClick={() =>
+                          editor?.chain().focus().toggleStrike().run()
+                        }
+                      >
                         <StrikethroughIcon className="size-4 mr-2" />
                         Tachado
-                        <MenubarShortcut>Ctrl + T</MenubarShortcut>
                       </MenubarItem>
                     </MenubarSubContent>
                   </MenubarSub>
-                  <MenubarItem>
+                  <MenubarItem
+                    onClick={() =>
+                      editor?.chain().focus().unsetAllMarks().run()
+                    }
+                  >
                     <RemoveFormattingIcon className="size-4 mr-2" />
                     Limpar Formatação
                   </MenubarItem>
