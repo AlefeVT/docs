@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 517">
+  <!-- White Background -->
+  <rect width="400" height="517" fill="white"/>
+  
+  <!-- Logo/Quarter Circle in top left -->
+  <path d="M0 0 L80 0 A80 80 0 0 0 0 80 Z" fill="#004aad"/>
+  
+  <!-- Main Title -->
+  <text x="40" y="150" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#004aad">
+    OFÍCIO Nº [001/20XX]
+  </text>
+  
+  <!-- Text Section -->
+  <text x="40" y="200" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Data: [04 de dezembro de 2024]
+  </text>
+  
+  <text x="40" y="230" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Destinatário: [Nome do Destinatário]
+  </text>
+  <text x="40" y="250" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Cargo: [Cargo do Destinatário]
+  </text>
+
+  <text x="40" y="280" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Prezado(a) [Nome],
+  </text>
+  <text x="40" y="300" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Corpo do texto do ofício, explicando solicitações ou comunicados.]
+  </text>
+  
+  <!-- Footer -->
+  <text x="40" y="420" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Atenciosamente,
+  </text>
+  <text x="40" y="450" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Nome do Remetente]
+  </text>
+  <text x="40" y="470" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Cargo: [Cargo do Remetente]
+  </text>
+</svg>

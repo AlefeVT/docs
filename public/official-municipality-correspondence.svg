@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 517">
+  <!-- White Background -->
+  <rect width="400" height="517" fill="white"/>
+
+  <!-- Header with Municipality Info -->
+  <text x="40" y="40" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#003366">
+    Prefeitura de [Nome da Cidade]
+  </text>
+  <text x="40" y="60" font-family="Arial, sans-serif" font-size="11" fill="#666666">
+    Endereço: Rua [Endereço], [Bairro], [Cidade] - [Estado]
+  </text>
+  <text x="40" y="75" font-family="Arial, sans-serif" font-size="11" fill="#666666">
+    Telefone: (XX) XXXX-XXXX | Email: contato@[domínio].gov.br
+  </text>
+  
+  <!-- Date -->
+  <text x="40" y="110" font-family="Arial, sans-serif" font-size="11">
+    [Data Atual]
+  </text>
+  
+  <!-- Recipient Info -->
+  <text x="40" y="150" font-family="Arial, sans-serif" font-size="11">
+    Sr(a). [Nome do Destinatário]
+  </text>
+  <text x="40" y="165" font-family="Arial, sans-serif" font-size="11">
+    [Cargo ou Departamento]
+  </text>
+  <text x="40" y="180" font-family="Arial, sans-serif" font-size="11">
+    [Endereço do Destinatário]
+  </text>
+  <text x="40" y="195" font-family="Arial, sans-serif" font-size="11">
+    [Cidade], [Estado], [CEP]
+  </text>
+  
+  <!-- Greeting -->
+  <text x="40" y="230" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+    Assunto: [Título do Comunicado]
+  </text>
+  <text x="40" y="260" font-family="Arial, sans-serif" font-size="12">
+    Prezado(a) Sr(a). [Nome do Destinatário],
+  </text>
+  
+  <!-- Body Placeholder -->
+  <line x1="40" y1="300" x2="360" y2="300" stroke="#CCCCCC" stroke-width="1"/>
+  <line x1="40" y1="320" x2="360" y2="320" stroke="#CCCCCC" stroke-width="1"/>
+  <line x1="40" y1="340" x2="360" y2="340" stroke="#CCCCCC" stroke-width="1"/>
+  <line x1="40" y1="360" x2="360" y2="360" stroke="#CCCCCC" stroke-width="1"/>
+  <line x1="40" y1="380" x2="360" y2="380" stroke="#CCCCCC" stroke-width="1"/>
+  
+  <!-- Closing -->
+  <text x="40" y="420" font-family="Arial, sans-serif" font-size="12">
+    Atenciosamente,
+  </text>
+  <text x="40" y="460" font-family="Arial, sans-serif" font-size="12">
+    [Nome do(a) Prefeito(a)] - Prefeito(a) Municipal
+  </text>
+  <text x="40" y="480" font-family="Arial, sans-serif" font-size="11" fill="#666666">
+    Prefeitura de [Nome da Cidade]
+  </text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 517">
+  <!-- White Background -->
+  <rect width="400" height="517" fill="white"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="60" fill="#004aad"/>
+  <text x="20" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    Relatório Técnico
+  </text>
+  
+  <!-- Main Title -->
+  <text x="40" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#004aad">
+    [Nome do Projeto]
+  </text>
+  
+  <!-- Sections -->
+  <text x="40" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    **Introdução**
+  </text>
+  <text x="40" y="180" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Texto explicativo sobre o propósito do relatório.]
+  </text>
+
+  <text x="40" y="220" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    **Metodologia**
+  </text>
+  <text x="40" y="240" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Texto descrevendo métodos ou técnicas utilizadas.]
+  </text>
+
+  <text x="40" y="280" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    **Resultados**
+  </text>
+  <text x="40" y="300" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Texto apresentando os resultados obtidos.]
+  </text>
+
+  <text x="40" y="340" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    **Conclusão**
+  </text>
+  <text x="40" y="360" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Texto com um resumo e próximos passos sugeridos.]
+  </text>
+  
+  <!-- Footer -->
+  <rect x="0" y="470" width="400" height="47" fill="#004aad"/>
+  <text x="20" y="495" font-family="Arial, sans-serif" font-size="12" fill="white">
+    Contato: contato@[dominio].gov.br
+  </text>
+</svg>

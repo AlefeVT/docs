@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 517">
+  <!-- White Background -->
+  <rect width="400" height="517" fill="white"/>
+  
+  <!-- Title -->
+  <text x="20" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#004aad">
+    Plano de Ação
+  </text>
+  <line x1="20" y1="60" x2="380" y2="60" stroke="#004aad" stroke-width="2"/>
+  
+  <!-- Section: Objective -->
+  <text x="20" y="100" font-family="Arial, sans-serif" font-size="14" fill="#333333">
+    Objetivo:
+  </text>
+  <line x1="20" y1="110" x2="380" y2="110" stroke="#cccccc" stroke-width="1"/>
+  <text x="20" y="130" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Descreva o objetivo principal do plano.]
+  </text>
+
+  <!-- Section: Steps -->
+  <text x="20" y="180" font-family="Arial, sans-serif" font-size="14" fill="#333333">
+    Etapas:
+  </text>
+  <line x1="20" y1="190" x2="380" y2="190" stroke="#cccccc" stroke-width="1"/>
+  <text x="20" y="210" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Liste as etapas detalhadas com datas e responsáveis.]
+  </text>
+
+  <!-- Section: Responsibility -->
+  <text x="20" y="300" font-family="Arial, sans-serif" font-size="14" fill="#333333">
+    Responsável:
+  </text>
+  <line x1="20" y1="310" x2="380" y2="310" stroke="#cccccc" stroke-width="1"/>
+  <text x="20" y="330" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Nome do responsável pelo plano.]
+  </text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 517">
+  <!-- White Background -->
+  <rect width="400" height="517" fill="white"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="400" height="60" fill="#004aad"/>
+  <text x="20" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    Memorando Interno
+  </text>
+  
+  <!-- Main Title -->
+  <text x="40" y="120" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#004aad">
+    Memorando Nº [001/20XX]
+  </text>
+  
+  <!-- Text Section -->
+  <text x="40" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Destinatário: [Nome do Destinatário]
+  </text>
+  <text x="40" y="180" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Setor: [Setor do Destinatário]
+  </text>
+  <text x="40" y="200" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Remetente: [Nome do Remetente]
+  </text>
+  <text x="40" y="220" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Setor: [Setor do Remetente]
+  </text>
+  
+  <text x="40" y="260" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Assunto: [Breve descrição do tema]
+  </text>
+  
+  <text x="40" y="300" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Corpo do texto do memorando, informando ou solicitando algo.]
+  </text>
+  
+  <!-- Footer -->
+  <text x="40" y="460" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    Atenciosamente,
+  </text>
+  <text x="40" y="490" font-family="Arial, sans-serif" font-size="12" fill="#333333">
+    [Nome do Remetente]
+  </text>
+</svg>
