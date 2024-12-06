@@ -34,4 +34,9 @@ export const templates = [
     label: "Correspondência Oficial",
     imageUrl: "/official-municipality-correspondence.svg",
   },
+  {
+    id: "oaaaaality-correspondence",
+    label: "Correspondência Oficial",
+    imageUrl: "/logo.webp",
+  },
 ];
