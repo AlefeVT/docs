@@ -40,6 +40,7 @@ import {
 } from "lucide-react";
 import { BsFilePdf } from "react-icons/bs";
 import { useEditorStore } from "@/app/store/use-editor-store";
+import Image from "next/image";
 
 export const Navbar = () => {
   const { editor } = useEditorStore();
@@ -93,9 +94,21 @@ export const Navbar = () => {
   return (
     <nav className="flex items-center justify-between">
       <div className="flex gap-2 items-center">
-        <Link href={"/"}>
-          <Logo />
-        </Link>
+        <div className="flex gap-3 items-center shrink-0 pr-6 max-h-7">
+          <Link href={"/"}>
+            <Image
+              alt="Logo"
+              src={"/logo1.webp"}
+              width={56}
+              height={56}
+              quality={100}
+              priority
+            />
+          </Link>
+          <h1 className="text-black font-extrabold text-xl lg:text-xl">
+            Doc<span className="text-cyan-700">Zone</span>
+          </h1>
+        </div>
         <div className="flex flex-col">
           <DocumentInput />
           <div className="flex">
